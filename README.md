@@ -1,2 +1,2 @@
 # JazzBot
-reads the music chat and adds each song to a youtube playlist
+Reads the music chat and adds each song to a YouTube playlist.
