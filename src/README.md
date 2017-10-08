@@ -1,4 +1,4 @@
-Both files are Python2 and must be run independently.
+Both files are Python2 and must be run independently. They both depend on [fbchat](https://fbchat.readthedocs.io/en/master/install.html).
 
 ## sender.py
 This is the reminder bot. It will read the MEMBERS list twice a day and send a notification every twelve hours regarding whose turn it is.
