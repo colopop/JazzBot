@@ -8,7 +8,7 @@ with open("../info/fblogin","r") as userinfo:
 	
 client = fb.Client(email,password)
 with open("../info/group","r") as gname:
-  group = client.searchForGroups(gname)[0] #find the right group
+  group = client.searchForGroups(gname.read())[0] #find the right group
 
 target_time = time.time()
 first_post_today = True #first post of the day
