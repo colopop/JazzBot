@@ -2,12 +2,12 @@ import fbchat as fb
 import time
 from getpass import getpass
 
-with open("../info/fblogin","r") as userinfo:
+with open("info/fblogin","r") as userinfo:
 	email = userinfo.readline()
 	password = userinfo.readline()
 	
 client = fb.Client(email,password)
-with open("../info/group","r") as gname:
+with open("info/group","r") as gname:
   group = client.searchForGroups(gname.read())[0] #find the right group
 
 target_time = time.time()
