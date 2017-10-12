@@ -4,9 +4,10 @@ from fbchat.models import *
 playlist = []
 
 #for testing -- this will end up adding the link to a youtube playlist.
-#def add_to_playlist(link):
-#	playlist.append(link)
-#	print playlist
+def add_to_playlist(link):
+	playlist.append(link)
+	with open("info/links","a") as pl:
+		pl.write("1"+playlist[-1])
 
 #subclass Client to have the behavior we want when receiving a message
 class YouTubeLinkGrabber(Client):
@@ -19,13 +20,13 @@ class YouTubeLinkGrabber(Client):
 					add_to_playlist(item['mercury']['share']['media']['source']) 
 
 
-with open("../info/fblogin","r") as userinfo:
+with open("info/fblogin","r") as userinfo:
 	email = userinfo.readline()
 	password = userinfo.readline()
 
 client = YouTubeLinkGrabber(email, password)
 
-with open("../info/group","r") as gname:
+with open("info/group","r") as gname:
   group = client.searchForGroups(gname.read())[0]
 
 client.listen()
