@@ -8,3 +8,6 @@ The facebook login information for your bot. This can be a personal account or a
 
 ## group
 The name of the group chat you will be reading from/posting to. Possible future functionality: multiple chats.
+
+## links
+Any YouTube links that get pulled out are dumped here
